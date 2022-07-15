@@ -26,7 +26,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors({
-    origin:"https://auth-frontend-five.vercel.app/",
+    origin:"https://auth-frontend-ik6nqjxa2-swap54.vercel.app/",
     credentials:true
 }));
 app.use(session({
@@ -70,9 +70,7 @@ app.post('/login',(req,res,next)=>{
         }
     })(req,res,next)
 })
-app.get('/user',(req,res)=>{
-    res.send(req.user);
-})
+
 app.listen(port,()=>{
     console.log("server running");
 })
