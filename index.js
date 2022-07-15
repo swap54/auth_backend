@@ -9,7 +9,7 @@ const cookieSession = require('cookie-parser');
 const bodyParser  =require('body-parser');
 const cookieParser = require('cookie-parser');
 const User = require('./user')
-
+const port = process.env.PORT || 3001;
 mongoose.connect('mongodb+srv://new_user:QJ50mjZuRxCF5EMN@cluster0.7gatw.mongodb.net/?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     //useCreateIndex: true,
@@ -73,6 +73,6 @@ app.post('/login',(req,res,next)=>{
 app.get('/user',(req,res)=>{
     res.send(req.user);
 })
-app.listen(3001,()=>{
+app.listen(port,()=>{
     console.log("server running");
 })
