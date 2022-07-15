@@ -26,7 +26,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors({
-    origin:"https://auth-frontend-ik6nqjxa2-swap54.vercel.app/",
+    origin:"https://auth-frontend-13d16s4nt-swap54.vercel.app/",
     credentials:true
 }));
 app.use(session({
