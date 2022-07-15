@@ -25,10 +25,11 @@ mongoose.connect('mongodb+srv://new_user:QJ50mjZuRxCF5EMN@cluster0.7gatw.mongodb
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(cors({
-    origin:"https://auth-frontend-13d16s4nt-swap54.vercel.app",
-    credentials:true
-}));
+// app.use(cors({
+//     origin:"https://auth-frontend-13d16s4nt-swap54.vercel.app",
+//     credentials:true
+// }));
+app.use(cors());
 app.use(session({
     secret: "secretcode",
     resave:true,
